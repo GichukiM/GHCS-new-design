@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="description"
+  content="Self-awareness and success life coaching sessions to increase self-awareness, avoid and heal from toxic relationships, date the right person, and grow in your career.">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Grow Hub Coaching Services</title>
+
+ <link rel="icon" type="image/x-icon" href="/assets/ghlogo.jpg">
+ <link rel=" stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+ <link rel="stylesheet" href="./style.css">
+
+ <!-- Google tag (gtag.js) -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-NGV6PZD4NY"></script>
+ <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-NGV6PZD4NY');
+ </script>
+
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+ <link rel="preload" as="image" href="./assets/prog-intr0.JPG">
+ <link rel="preload" as="image" href="./assets/prog-intr0.JPG">
+ <link rel="preload" as="image" href="./assets/prog-intr0.JPG">
+</head>
+
+<body id="top">
+
+ <!-- preloader -->
+
+ <div class="preload" data-preaload>
+  <div class="circle"></div>
+  <p class="text">GHCS</p>
+ </div>
+
+ <section class="section text-center program">
+
+  <div class="prog-details">
+
+   <div class="single-prog-details">
+    <h1>No-Cost 1-Hour Session<br>(strictly online)</h1>
+    <p class="section-text">This is an exploratory session that should help you, and I understand what you need to allow you to come up
+     with the
+     most optimal way forward to address your pain point.</p>
+
+    <br>
+
+    <p>Book your session here</p>
+
+    <br>
+    <p> <span>Regards, GHCC Team.
+     </span></p>
+
+
+   </div>
+  </div>
+
+  <div class="payment">
+
+   <!-- Calendly inline widget begin -->
+   <div class="calendly-inline-widget"
+    data-url="https://calendly.com/sessionwithgrowhub?hide_landing_page_details=1&hide_gdpr_banner=1"
+    style="width:100%;height:700px;"></div>
+   <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+   <!-- Calendly inline widget end -->
+
+
+  </div>
+
+ </section>
+ <a href="#top" class="back-top-btn active" aria-label="back to top" data-back-top-btn>
+  <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+ </a>
+ 
+ </article>
+ </main>
+ 
+ <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+ <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+ 
+ <script>
+
+  function generateLink() {
+   // Use https://payment.intasend.com/api/v1/checkout/ for live payments
+   let url = "https://payment.intasend.com/api/v1/checkout/"
+   let email = document.getElementById("email").value;
+   let full_name = document.getElementById("name").value;
+
+
+   let nameParts = full_name.split(" ")
+   let first_name = nameParts[0]
+
+   // remove then join the remaining parts
+   let last_name = nameParts.slice(1).join(" ")
+
+
+   let payload = {
+    public_key: "ISPubKey_live_8d8dba3c-3bb7-4356-9c47-afafcfee59ae",
+    amount: 84000,
+    currency: "KES",
+    email: email,
+    first_name: first_name,
+    last_name: last_name,
+   }
+
+   axios.post(url, payload).then((resp) => {
+    if (resp.data.url) {
+     window.open(resp.data.url, '_blank').focus();
+    }
+   }).catch((err) => alert("Problem experienced while initializing your request: " + err))
+  }
+ </script>
+ 
+ 
+ <script src="script.js"></script>
+ </body>
+ 
+ </html>
