@@ -222,12 +222,8 @@ body {
   font-size: var(--fontSize-body-4);
   font-weight: var(--weight-regular);
   line-height: var(--lineHeight-5);
-  overflow: hidden;
+  overflow: overlay;
   height: 100vh;
-}
-
-body.loaded {
- overflow: overlay;
 }
 
 body.nav-active {
